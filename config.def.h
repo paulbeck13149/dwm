@@ -138,9 +138,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	/* Volume keys */
-    { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5 && pkill -RTMIN+10 dwmblocks") },
-    { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer -d 5 && pkill -RTMIN+10 dwmblocks") },
-    { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t && pkill -RTMIN+10 dwmblocks") },
+    { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5 && pkill -RTMIN+5 dwmblocks") },
+    { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer -d 5 && pkill -RTMIN+5 dwmblocks") },
+    { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t && pkill -RTMIN+5 dwmblocks") },
 };
 
 /* button definitions */
