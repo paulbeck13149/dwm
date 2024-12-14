@@ -141,8 +141,8 @@ static const Key keys[] = {
 	/* Volume keys */
     { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5 && pkill -RTMIN+5 dwmblocks") },
     { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer -d 5 && pkill -RTMIN+5 dwmblocks") },
-    { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t && pkill -RTMIN+5 dwmblocks") },
-	{ 0, XF86XK_AudioMicMute,                 spawn, SHCMD("pamixer -t && pkill -RTMIN+10 dwmblocks") },
+    { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t && pkill -RTMIN+5 dwmblocks") }, // Speaker mute
+	{ 0, XF86XK_AudioMicMute,                 spawn, SHCMD("pamixer -t && pkill -RTMIN+10 dwmblocks") }, // Mic mute
 };
 
 /* button definitions */
