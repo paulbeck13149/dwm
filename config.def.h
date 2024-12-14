@@ -47,7 +47,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
 #include <X11/XF86keysym.h> /* For multimedia key support */
-#include <X11.keysym.h>
+#include <X11/keysym.h>
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
