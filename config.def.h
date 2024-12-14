@@ -137,13 +137,10 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	/* Volume control */
-    { 0, XF86XK_AudioMute, spawn, 
-        SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
-    { 0, XF86XK_AudioLowerVolume, spawn, 
-        SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -44 $(pidof dwmblocks)") },
-    { 0, XF86XK_AudioRaiseVolume, spawn, 
-        SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%; kill -44 $(pidof dwmblocks)") },
+	/* Volume keys */
+    { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5 && pkill -RTMIN+10 dwmblocks") },
+    { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer -d 5 && pkill -RTMIN+10 dwmblocks") },
+    { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t && pkill -RTMIN+10 dwmblocks") },
 };
 
 /* button definitions */
