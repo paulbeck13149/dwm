@@ -47,6 +47,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
 #include <X11/XF86keysym.h> /* For multimedia key support */
+#include <X11.keysym.h>
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -141,6 +142,7 @@ static const Key keys[] = {
     { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5 && pkill -RTMIN+5 dwmblocks") },
     { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer -d 5 && pkill -RTMIN+5 dwmblocks") },
     { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t && pkill -RTMIN+5 dwmblocks") },
+	{ 0, XK_Mute,                 spawn, SHCMD("pamixer -t && pkill -RTMIN+10 dwmblocks") },
 };
 
 /* button definitions */
